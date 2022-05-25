@@ -12,11 +12,10 @@ for i in range(1, m+1):
         accessories.update({i: (v, v*p, q)})
     else:
         main_parts.update({i: (v, v*p, [])})
-for i in accessories:
+for i, value in accessories.items():
     main_parts[accessories[i][2]][2].append((accessories[i][0], accessories[i][1]))
 dp = [0 for i in range(N + 1)]
-for k in main_parts:
-    main_part = main_parts[k]
+for k, main_part in main_parts.items():
     _accessories = main_part[2]
     for j in range(N, 0, -1):
         if j < main_part[0]:
