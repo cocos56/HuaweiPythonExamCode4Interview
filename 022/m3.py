@@ -12,8 +12,7 @@ def function(number):
     """
     if number >= 2:
         return function(number - 2) + 1
-    else:
-        return 0
+    return 0
 
 
 if __name__ == '__main__':
