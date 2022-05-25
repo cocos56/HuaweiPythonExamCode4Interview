@@ -12,6 +12,6 @@ try:
         else:
             dic[key] = 1
 except (EOFError, ValueError):
-    keys = [k for k in dic][-8:]
+    keys = list(dic)[-8:]
     for k in keys:
         print(k, dic[k])
