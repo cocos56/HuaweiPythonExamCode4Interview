@@ -27,10 +27,9 @@ try:
         if mask in ('0.0.0.0', '255.255.255.255'):
             errs += 1
             continue
-        else:
-            if re.search('01', mask_bin):
-                errs += 1
-                continue
+        if re.search('01', mask_bin):
+            errs += 1
+            continue
         ip_bin = get_bin(ip)
         if re.search(r'\.\.', ip):
             errs += 1
