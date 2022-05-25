@@ -1,3 +1,6 @@
+"""
+题解3：直接处理
+"""
 s = input()
 cnt = 0
 for i in s:
