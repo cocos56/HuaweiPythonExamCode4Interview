@@ -1,3 +1,7 @@
+"""
+a
+"""
+
 dic = {}
 s = input()
 for i in s:
