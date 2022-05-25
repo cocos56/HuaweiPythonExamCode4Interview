@@ -13,7 +13,7 @@ for i in range(1, m+1):
     else:
         main_parts.update({i: (v, v*p, [])})
 for i, value in accessories.items():
-    main_parts[accessories[i][2]][2].append((accessories[i][0], accessories[i][1]))
+    main_parts[value[2]][2].append((value[0], value[1]))
 dp = [0 for i in range(N + 1)]
 for k, main_part in main_parts.items():
     _accessories = main_part[2]
