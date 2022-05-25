@@ -24,7 +24,7 @@ try:
         mask_bin = get_bin(mask)
         if ip.split('.')[0] in ('0', '127'):
             continue
-        elif mask in ('0.0.0.0', '255.255.255.255'):
+        if mask in ('0.0.0.0', '255.255.255.255'):
             errs += 1
             continue
         else:
