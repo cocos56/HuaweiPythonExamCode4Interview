@@ -4,6 +4,7 @@
 while True:
     try:
         pw = input()
+        # pylint: disable=C0103
         a, b, c, d, flag = 0, 0, 0, 0, True
         for i in pw:
             if i.isdigit():  # 或者使用条件：'0' <= i <= '9'
