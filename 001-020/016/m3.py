@@ -8,9 +8,9 @@ for i in range(m):
     v, p, q = map(int, input().split(' '))
     v = v//10  # 每件物品的价格（都是 10 元的整数倍），为了加快处理速度，先除以10
     vpq_list.append((v, v*p, q, []))
-for i in range(len(vpq_list)):
-    if vpq_list[i][2]:
-        vpq_list[vpq_list[i][2] - 1][3].append(i)
+for i, item in enumerate(vpq_list):
+    if item[2]:
+        vpq_list[item[2] - 1][3].append(i)
 vw_list1, vw_list2 = [], []
 for i in vpq_list:
     if i[3]:  # 包含附件的主件
