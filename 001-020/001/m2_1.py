@@ -4,9 +4,9 @@
 
 
 def get_length():
-    s = input()
+    string = input()
     length = 0
-    for i in reversed(s):
+    for i in reversed(string):
         if i == ' ':
             break
         length += 1
