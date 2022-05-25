@@ -8,7 +8,7 @@ total = 0
 for i in s[::-1]:
     if i == 'x':
         break
-    elif i == 'A':
+    if i == 'A':
         total += 10 * pow(16, p)
     elif i == 'B':
         total += 11 * pow(16, p)
