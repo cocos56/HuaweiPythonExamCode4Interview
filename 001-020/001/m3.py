@@ -2,6 +2,7 @@
 题解3：直接处理
 """
 s = input()
+# pylint: disable=C0103
 count = 0
 for i in s:
     if i == ' ':
