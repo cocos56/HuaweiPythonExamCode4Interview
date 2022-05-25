@@ -1,8 +1,8 @@
 """
 题解2：先统一替换再打印
 """
-s = input()
 dic = {}
+s = input()
 for i in s:
     if i in dic:
         dic[i] += 1

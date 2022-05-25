@@ -1,6 +1,7 @@
 """
 题解1：追一先比较再打印
 """
+# pylint: disable=R0801
 dic = {}
 s = input()
 for i in s:
