@@ -2,6 +2,7 @@
 题解2：逐位计算值然后累加
 """
 s = input()
+# pylint: disable=C0103
 p = 0
 total = 0
 for i in s[::-1]:
