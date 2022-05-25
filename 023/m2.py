@@ -9,7 +9,7 @@ for i in s:
     else:
         dic[i] = 1
 m = min(dic.values())
-for i in dic:
-    if dic[i] == m:
+for i, value in dic.items():
+    if value == m:
         s = s.replace(i, '')
 print(s)
