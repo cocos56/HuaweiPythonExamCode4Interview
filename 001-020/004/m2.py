@@ -5,6 +5,7 @@ try:
     while True:
         s = input()
         for i in range(0, len(s), 8):
+            # pylint: disable=C0209
             print('{:0<8s}'.format(s[i:i+8]))
 except EOFError:
     pass

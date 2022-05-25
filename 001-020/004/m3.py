@@ -8,6 +8,7 @@ try:
         if not length % 8 == 0:
             for i in range(8 - length % 8):
                 s += '0'
+        # pylint: disable=C0103
         cnt = 0
         for i in s:
             cnt += 1

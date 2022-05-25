@@ -3,6 +3,7 @@
 """
 while True:
     try:
+        # pylint: disable=C0103
         cnt = 0
         for i in input():
             if cnt % 8 == 0 and cnt:
