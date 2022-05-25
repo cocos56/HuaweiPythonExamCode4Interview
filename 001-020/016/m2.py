@@ -26,21 +26,25 @@ for k in main_parts:
         elif len(_accessories) == 1:
             if j >= main_part[0] + _accessories[0][0]:
                 dp[j] = max(dp[j], main_part[1] + dp[j - main_part[0]],
-                            main_part[1] + _accessories[0][1] + dp[j - main_part[0] - _accessories[0][0]])
+                            main_part[1] + _accessories[0][1] + dp[j - main_part[0] -
+                                                                   _accessories[0][0]])
             else:
                 dp[j] = max(dp[j], main_part[1] + dp[j - main_part[0]])
         elif len(_accessories) == 2:
             if j >= main_part[0] + _accessories[0][0] + _accessories[1][0]:
                 dp[j] = max(dp[j], main_part[1] + dp[j - main_part[0]],
-                            main_part[1] + _accessories[0][1] + dp[j - main_part[0] - _accessories[0][0]],
+                            main_part[1] + _accessories[0][1] + dp[j - main_part[0] -
+                                                                   _accessories[0][0]],
                             main_part[1] + _accessories[0][1] + _accessories[1][1] + dp[
                                 j - main_part[0] - _accessories[0][0] - _accessories[1][0]])
             elif j >= main_part[0] + _accessories[0][0]:
                 dp[j] = max(dp[j], main_part[1] + dp[j - main_part[0]],
-                            main_part[1] + _accessories[0][1] + dp[j - main_part[0] - _accessories[0][0]])
+                            main_part[1] + _accessories[0][1] + dp[j - main_part[0] -
+                                                                   _accessories[0][0]])
             elif j >= main_part[0] + _accessories[1][0]:
                 dp[j] = max(dp[j], main_part[1] + dp[j - main_part[0]],
-                            main_part[1] + _accessories[1][1] + dp[j - main_part[0] - _accessories[1][0]])
+                            main_part[1] + _accessories[1][1] + dp[j - main_part[0] -
+                                                                   _accessories[1][0]])
             else:
                 dp[j] = max(dp[j], main_part[1] + dp[j - main_part[0]])
 print(dp[-1]*10)
