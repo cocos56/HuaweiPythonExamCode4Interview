@@ -1,18 +1,10 @@
 """
 题解2_1：先逆序再处理_使用reverse函数
 """
-
-
-def get_length(string):
-    """
-    获取单词的长度
-    """
-    length = 0
-    for i in reversed(string):
-        if i == ' ':
-            break
-        length += 1
-    print(length)
-
-
-get_length(input())
+# pylint: disable=C0103
+length = 0
+for i in reversed(input()):
+    if i == ' ':
+        break
+    length += 1
+print(length)

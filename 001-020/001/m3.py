@@ -1,12 +1,11 @@
 """
 题解3：直接处理
 """
-s = input()
 # pylint: disable=C0103
-count = 0
-for i in s:
+cnt = 0
+for i in input():
     if i == ' ':
-        count = 0
+        cnt = 0
         continue
-    count += 1
-print(count)
+    cnt += 1
+print(cnt)
