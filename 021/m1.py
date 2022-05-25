@@ -1,6 +1,7 @@
 """
 题解1：逐一情况处理
 """
+# pylint: disable=C0103
 s = ''
 for i in input():
     if 'a' <= i <= 'c':
