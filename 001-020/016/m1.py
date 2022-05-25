@@ -26,7 +26,7 @@ for key, value in main_parts.items():
             w.append(w[0] + accessories[key][0][0] + accessories[key][1][0])  # 4、主件+附件1+附件2
             v.append(v[0] + accessories[key][0][1] + accessories[key][1][1])
     for j in range(N, -1, -10):  # 物品的价格是10的整数倍
-        for k in range(len(w)):
+        for k, _ in enumerate(w):
             if j - w[k] >= 0:
                 dp[j] = max(dp[j], dp[j - w[k]] + v[k])
 print(dp[N])
