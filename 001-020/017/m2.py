@@ -10,6 +10,7 @@ for item in input().split(';'):
     except ValueError:
         continue
     direction = item[0]
+    # pylint: disable=R0801
     if direction == 'A':
         x -= step
     elif direction == 'D':
