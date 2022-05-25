@@ -4,9 +4,14 @@
 import sys
 
 
-def function(n):
-    if n >= 2:
-        return function(n - 2) + 1
+def function(number):
+    """
+    递归方法
+    :param number: 空气瓶数量
+    :return: 最多可以喝的气瓶数
+    """
+    if number >= 2:
+        return function(number - 2) + 1
     else:
         return 0
 
