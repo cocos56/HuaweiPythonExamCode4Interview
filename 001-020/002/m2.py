@@ -3,6 +3,7 @@
 """
 s = input().upper()
 c = input().upper()
+# pylint: disable=C0103
 cnt = 0
 for i in s:
     if c == i:
