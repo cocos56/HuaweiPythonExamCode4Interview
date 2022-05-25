@@ -4,9 +4,9 @@
 import sys
 
 
-def f(n):
+def function(n):
     if n >= 2:
-        return f(n - 2) + 1
+        return function(n - 2) + 1
     else:
         return 0
 
@@ -16,4 +16,4 @@ if __name__ == '__main__':
     for x in data:
         x = int(x.strip())
         if x:
-            print(f(x))
+            print(function(x))

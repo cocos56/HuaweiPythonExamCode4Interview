@@ -5,6 +5,7 @@ while True:
     n = int(input())
     if not n:
         break
+    # pylint: disable=C0103
     b = 0
     while n > 1:
         if n == 2:
