@@ -15,8 +15,8 @@ for i in range(1, m + 1):
 dp = [0] * (N + 1)
 for key, value in main_parts.items():
     w, v = [], []
-    w.append(main_parts[key][0])  # 1、主件
-    v.append(main_parts[key][1])
+    w.append(value[0])  # 1、主件
+    v.append(value[1])
     if key in accessories:  # 存在附件
         w.append(w[0] + accessories[key][0][0])  # 2、主件+附件1
         v.append(v[0] + accessories[key][0][1])
