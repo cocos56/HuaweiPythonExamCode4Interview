@@ -4,22 +4,27 @@
 import re
 
 
-def check_pw(pw):
-    if len(pw) < 8:
+def check_pw(password):
+    """
+    检查密码
+    :param password: 密码
+    :return: 是否合格
+    """
+    if len(password) < 8:
         return False
     mix_types = 0
-    if re.search(r'\d', pw):  # 匹配数字还可以使用'[0-9]'
+    if re.search(r'\d', password):  # 匹配数字还可以使用'[0-9]'
         mix_types += 1
-    if re.search('[a-z]', pw):
+    if re.search('[a-z]', password):
         mix_types += 1
-    if re.search('[A-Z]', pw):
+    if re.search('[A-Z]', password):
         mix_types += 1
-    if re.search('[^0-9a-zA-Z]', pw):
+    if re.search('[^0-9a-zA-Z]', password):
         mix_types += 1
     if mix_types < 3:
         return False
-    for i in range(len(pw) - 3):
-        if pw.count(pw[i:i + 3]) > 1:  # 或者使用len(pw.split(pw[i:i+3])) > 2
+    for i in range(len(password) - 3):
+        if password.count(password[i:i + 3]) > 1:  # 或者使用len(pw.split(pw[i:i+3])) > 2
             return False
     return True
 
