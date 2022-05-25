@@ -3,8 +3,10 @@
 """
 
 
-def get_length():
-    string = input()
+def get_length(string):
+    """
+    获取单词的长度
+    """
     length = 0
     for i in reversed(string):
         if i == ' ':
@@ -13,4 +15,4 @@ def get_length():
     print(length)
 
 
-get_length()
+get_length(input())
