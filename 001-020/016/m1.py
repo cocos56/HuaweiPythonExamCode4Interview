@@ -13,7 +13,7 @@ for i in range(1, m + 1):
         else:
             accessories[q] = [[v, v*p]]
 dp = [0] * (N + 1)
-for key in main_parts:
+for key in main_parts.keys():
     w, v = [], []
     w.append(main_parts[key][0])  # 1、主件
     v.append(main_parts[key][1])
